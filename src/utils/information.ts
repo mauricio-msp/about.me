@@ -30,13 +30,13 @@ export const datas: Record<string, any> = {
             title: 'Gofind',
             category: 'work experience',
             description:
-              'Development and maintenance of applications in React. Creation and manipulation of maps using Mapbox and generation of interfaces and reports, fed with millions of data. Use of AWS tools such as Lambda, DynamoDB and Firebase, among others. Use of Github, both for code versioning and the use of Github Actions for automating the Production workflow. Interface development using Material UI Integration with Google My Business api to generate locations and integrated posts. 2020 - present.',
+              'Development and maintenance of applications in React. Creation and manipulation of maps using Mapbox and generation of interfaces and reports, fed with millions of data. Use of AWS tools such as Lambda, DynamoDB and Firebase, among others. Use of Github, both for code versioning and the use of Github Actions for automating the Production workflow. Interface development using Material UI Integration with Google My Business api to generate locations and integrated posts. 2021 - present.',
           },
           {
             title: 'TB Empreendimentos Imobiliários LTDA',
             category: 'work experience',
             description:
-              'Development and maintenance of internal environments for the company and for our customers using the ReactJS tool together with a Design System (Ant Design) and styled-components. Establishing communication between environments with APIs and real-time with WebSocket. Expanded the Odýsseus project, which is aimed at transport companies and cranes. Feb 2019 - Jul 2020.',
+              'Development and maintenance of internal environments for the company and for our customers using the ReactJS tool together with a Design System (Ant Design) and styled-components. Establishing communication between environments with APIs and real-time with WebSocket. Expanded the Odýsseus project, which is aimed at transport companies and cranes. Feb 2020 - Jul 2021.',
           },
         ],
       },
@@ -99,13 +99,13 @@ export const datas: Record<string, any> = {
             title: 'Gofind',
             category: 'experiência de trabalho',
             description:
-              'Desenvolvimento e manutenção de aplicações em React. Criação e manipulação de mapas utilizando Mapbox e geração de interfaces e relatórios, alimentados com milhões de dados. Uso de ferramentas da AWS como Lambda, DynamoDB e Firebase, entre outras. Uso do Github, tanto para versionamento de código quanto o uso de Github Actions para automatizar o workflow de Produção. Desenvolvimento de interface utilizando Material UI Integration com api Google My Business para geração de localizações e posts integrados. 2020 - presente.',
+              'Desenvolvimento e manutenção de aplicações em React. Criação e manipulação de mapas utilizando Mapbox e geração de interfaces e relatórios, alimentados com milhões de dados. Uso de ferramentas da AWS como Lambda, DynamoDB e Firebase, entre outras. Uso do Github, tanto para versionamento de código quanto o uso de Github Actions para automatizar o workflow de Produção. Desenvolvimento de interface utilizando Material UI Integration com api Google My Business para geração de localizações e posts integrados. 2021 - presente.',
           },
           {
             title: 'TB Empreendimentos Imobiliários LTDA',
             category: 'experiência de trabalho',
             description:
-              'Desenvolvimento e manutenção de ambientes internos para a empresa e para nossos clientes utilizando a ferramenta ReactJS em conjunto com um Design System (Ant Design) e styled-components. Estabelecendo comunicação entre ambientes com APIs e em tempo real com WebSocket. Ampliou o projeto Odýsseus, voltado para empresas de transporte e guindastes. fevereiro de 2019 - julho de 2020.',
+              'Desenvolvimento e manutenção de ambientes internos para a empresa e para nossos clientes utilizando a ferramenta ReactJS em conjunto com um Design System (Ant Design) e styled-components. Estabelecendo comunicação entre ambientes com APIs e em tempo real com WebSocket. Ampliou o projeto Odýsseus, voltado para empresas de transporte e guindastes. fevereiro de 2020 - julho de 2021.',
           },
         ],
       },
