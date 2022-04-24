@@ -49,8 +49,7 @@ const Home: NextPage = () => {
             color="gradient"
             css={{ fontSize: '3.5rem', '@xs': { fontSize: '2rem' } }}
           >
-            {datas[`${language}`].greetings[0]}
-            {''}
+            {datas[`${language}`].greetings[0]}{' '}
             <Image
               src="/hi.gif"
               alt="Hi!"
@@ -96,7 +95,7 @@ const Home: NextPage = () => {
               Linkedin
             </a>
             <a href="#" rel="noopener noreferrer" className="disabled">
-              More
+              {datas[`${language}`].greetings[2]}
             </a>
           </H.Social>
         </H.Profile>

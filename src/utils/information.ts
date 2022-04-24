@@ -1,6 +1,6 @@
 export const datas: Record<string, any> = {
   en: {
-    greetings: ['Hi', "I'm"],
+    greetings: ['Hi', "I'm", 'More'],
     about:
       'Lover of front-end web and mobile development, focused on finding better solutions with the knowledge acquired in the most popular tools and languages, thus being able to contribute to the community.',
     more: [
@@ -69,7 +69,7 @@ export const datas: Record<string, any> = {
     ],
   },
   pt: {
-    greetings: ['Olá', 'Eu sou'],
+    greetings: ['Olá', 'Eu sou', 'Mais'],
     about:
       'Amante do desenvolvimento web e mobile front-end, focado em encontrar melhores soluções com o conhecimento adquirido nas ferramentas e linguagens mais populares, podendo assim contribuir com a comunidade.',
     more: [
