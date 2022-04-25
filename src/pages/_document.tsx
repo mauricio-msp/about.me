@@ -7,7 +7,7 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <meta charSet="utf-8" />
-          <meta name="theme-color" content="#0000FF" />
+          <meta name="theme-color" content="#121212" />
 
           <style
             id="stitches"
@@ -15,7 +15,7 @@ class MyDocument extends Document {
           />
 
           <link rel="manifest" href="/manifest.json" />
-          <link rel="apple-touch-icon" href="/icon-512x512.png" />
+          <link rel="apple-touch-icon" href="/icon2-512x512.png" />
 
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
