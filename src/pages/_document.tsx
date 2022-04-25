@@ -7,7 +7,7 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <meta charSet="utf-8" />
-          <meta name="theme-color" content="#121212" />
+          <meta name="theme-color" content="#0000FF" />
 
           <style
             id="stitches"
