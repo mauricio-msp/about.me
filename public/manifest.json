@@ -1,9 +1,9 @@
 {
   "theme_color": "#FEFDEF",
   "background_color": "#121212",
-  "display": "browser",
+  "display": "standalone",
   "scope": "/",
-  "start_url": "http://mauricioporfirio.vercel.app/",
+  "start_url": "/",
   "name": "mauricio porfirio (pwa)",
   "short_name": "msp",
   "icons": [
