@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useTheme } from 'next-themes'
 
 import * as SwitchPrimitive from '@radix-ui/react-switch'
@@ -48,13 +48,21 @@ const SwitchThumb = StyledThumb
 
 export function Switch() {
   const { sound } = useProvider()
-  const { theme, setTheme } = useTheme()
+  const { resolvedTheme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  // When mounted on client, now we can show the UI
+  useEffect(() => setMounted(true), [])
 
   const audioRef = useRef<HTMLAudioElement>(null)
 
   function handleToggleTheme() {
-    setTheme(theme === 'dark' ? 'light' : 'dark')
+    const targetTheme = resolvedTheme === 'light' ? 'dark' : 'light'
+
+    setTheme(targetTheme)
   }
+
+  if (!mounted) return null
 
   return (
     <Flex>
@@ -63,7 +71,7 @@ export function Switch() {
       <SunIcon />
       <SwitchRoot
         id="switch-theme"
-        checked={theme === 'dark'}
+        checked={resolvedTheme === 'dark'}
         onCheckedChange={handleToggleTheme}
         onClick={() => sound && audioRef.current?.play()}
       >

@@ -55,6 +55,7 @@ const Home: NextPage = () => {
               alt="Hi!"
               width={isMobile ? 30 : 50}
               height={isMobile ? 30 : 50}
+              unoptimized
             />
             , {datas[`${language}`].greetings[1]} <br /> Maurício Porfírio.
           </Typography>

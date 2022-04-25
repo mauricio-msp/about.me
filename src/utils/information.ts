@@ -69,7 +69,7 @@ export const datas: Record<string, any> = {
     ],
   },
   pt: {
-    greetings: ['Olá', 'Eu sou', 'Mais'],
+    greetings: ['Olá', 'eu sou', 'Mais'],
     about:
       'Amante do desenvolvimento web e mobile front-end, focado em encontrar melhores soluções com o conhecimento adquirido nas ferramentas e linguagens mais populares, podendo assim contribuir com a comunidade.',
     more: [
