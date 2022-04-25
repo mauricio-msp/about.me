@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react'
+
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
@@ -20,6 +22,10 @@ const Home: NextPage = () => {
   const { language } = useProvider()
   const { viewport } = useViewport()
   const isMobile = viewport.width < 600
+
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => setMounted(true), [])
 
   return (
     <>
@@ -50,13 +56,15 @@ const Home: NextPage = () => {
             css={{ fontSize: '3.5rem', '@xs': { fontSize: '2rem' } }}
           >
             {datas[`${language}`].greetings[0]}{' '}
-            <Image
-              src="/hi.gif"
-              alt="Hi!"
-              width={isMobile ? 30 : 50}
-              height={isMobile ? 30 : 50}
-              unoptimized
-            />
+            {mounted && (
+              <Image
+                src="/hi.gif"
+                alt="Hi!"
+                width={isMobile ? 30 : 50}
+                height={isMobile ? 30 : 50}
+                unoptimized
+              />
+            )}
             , {datas[`${language}`].greetings[1]} <br /> Maurício Porfírio.
           </Typography>
 

@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+
 import * as TogglePrimitive from '@radix-ui/react-toggle'
 import { SpeakerLoudIcon, SpeakerOffIcon } from '@radix-ui/react-icons'
 
@@ -33,9 +35,18 @@ const StyledToggle = styled(TogglePrimitive.Root, {
 
 const Toggle = StyledToggle
 
-// Your app...
 export function ButtonSound() {
   const { sound, enableSound } = useProvider()
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const storageSound = window.localStorage.getItem('@app:sound')
+
+      if (storageSound) {
+        enableSound(JSON.parse(storageSound))
+      }
+    }
+  }, [])
 
   return (
     <Toggle

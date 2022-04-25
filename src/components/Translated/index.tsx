@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+
 import * as ToggleGroupPrimitive from '@radix-ui/react-toggle-group'
 
 import { styled } from '@stitches/react'
@@ -47,6 +49,16 @@ const ToggleGroupItem = StyledItem
 
 export function TranslateGroup() {
   const { language, toggleLanguage } = useProvider()
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const storageLanguage = window.localStorage.getItem('@app:language')
+
+      if (storageLanguage) {
+        toggleLanguage(storageLanguage)
+      }
+    }
+  }, [])
 
   return (
     <ToggleGroup

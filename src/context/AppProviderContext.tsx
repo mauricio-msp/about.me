@@ -1,28 +1,36 @@
 import { createContext, useState, ReactNode } from 'react'
 
-type ContextData = {
+type AppContextData = {
   language: string
   sound: boolean
   toggleLanguage: (l: string) => void
   enableSound: (s: boolean) => void
 }
 
-export const Context = createContext({} as ContextData)
+export const Context = createContext({} as AppContextData)
 
-type ContextProviderProps = {
+type AppContextProviderProps = {
   children: ReactNode
 }
 
-export function Provider({ children }: ContextProviderProps) {
+export function AppProvider({ children }: AppContextProviderProps) {
   const [language, setLanguage] = useState<string>('en')
   const [sound, setSound] = useState<boolean>(true)
 
   function toggleLanguage(language: string) {
     setLanguage(language)
+
+    if (typeof window !== 'undefined') {
+      window.localStorage.setItem('@app:language', language)
+    }
   }
 
   function enableSound(sound: boolean) {
     setSound(sound)
+
+    if (typeof window !== 'undefined') {
+      window.localStorage.setItem('@app:sound', JSON.stringify(sound))
+    }
   }
 
   return (

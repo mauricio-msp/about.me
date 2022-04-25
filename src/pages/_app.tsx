@@ -1,7 +1,7 @@
 import type { AppProps } from 'next/app'
 import { ThemeProvider } from 'next-themes'
 
-import { Provider } from '@/context/ProviderContext'
+import { AppProvider } from '@/context/AppProviderContext'
 
 import { globalStyle } from '@/styles/global'
 import { light, dark } from '@/styles/theme'
@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       {globalStyle()}
-      <Provider>
+      <AppProvider>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         >
           <Component {...pageProps} />
         </ThemeProvider>
-      </Provider>
+      </AppProvider>
     </>
   )
 }

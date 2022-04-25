@@ -29,7 +29,6 @@ const Box = styled('div', {
 
   '&.grid': {
     display: 'grid',
-    gridTemplateColumns: 'repeat(2, 1fr)',
 
     '@xs': { gridTemplateColumns: '1fr' },
     '@sm': { gridTemplateColumns: '1fr' },

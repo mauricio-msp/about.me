@@ -39,6 +39,13 @@ export const Profile = styled('section', {
     borderRadius: '9999px',
   },
 
+  '& .icon-greetings': {
+    objectFit: 'contain',
+    width: '100% !important',
+    position: 'relative !important',
+    height: 'unset !important',
+  },
+
   '& .description': {
     width: '100%',
     maxWidth: 460,
@@ -51,6 +58,11 @@ export const Profile = styled('section', {
     width: '100%',
     height: 'auto',
     position: 'relative',
+
+    '& .icon-greetings': {
+      width: '30px !important',
+      height: '30px !important',
+    },
   },
   '@sm': {
     width: '100%',
