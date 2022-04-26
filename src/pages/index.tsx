@@ -30,6 +30,11 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+        />
+
         <title>Home | Maurício Porfírio</title>
       </Head>
 
@@ -109,9 +114,9 @@ const Home: NextPage = () => {
           </H.Social>
         </H.Profile>
 
-        <H.Main>
+        <H.About>
           <Card />
-        </H.Main>
+        </H.About>
       </H.Container>
     </>
   )

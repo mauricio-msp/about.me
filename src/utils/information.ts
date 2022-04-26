@@ -1,9 +1,29 @@
-export const datas: Record<string, any> = {
+type Language = string
+
+type Info = {
+  title: string
+  category: string
+  description: string
+}
+
+type Content = {
+  id: string
+  style: string
+  info: Info[]
+}
+
+type Data = {
+  greetings: Array<string>
+  about: string
+  content: Content[]
+}
+
+export const datas: Record<Language, Data> = {
   en: {
     greetings: ['Hi', "I'm", 'More'],
     about:
       'Lover of front-end web and mobile development, focused on finding better solutions with the knowledge acquired in the most popular tools and languages, thus being able to contribute to the community.',
-    more: [
+    content: [
       {
         id: 'formation',
         style: 'column',
@@ -72,7 +92,7 @@ export const datas: Record<string, any> = {
     greetings: ['Olá', 'eu sou', 'Mais'],
     about:
       'Amante do desenvolvimento web e mobile front-end, focado em encontrar melhores soluções com o conhecimento adquirido nas ferramentas e linguagens mais populares, podendo assim contribuir com a comunidade.',
-    more: [
+    content: [
       {
         id: 'formation',
         style: 'column',

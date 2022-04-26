@@ -30,9 +30,9 @@ const Box = styled('div', {
   '&.grid': {
     display: 'grid',
 
-    '@xs': { gridTemplateColumns: '1fr' },
-    '@sm': { gridTemplateColumns: '1fr' },
-    '@md': { gridTemplateColumns: '1fr' },
+    '@xs': { gridTemplateColumns: '1fr', marginBottom: 16 },
+    '@sm': { gridTemplateColumns: '1fr', marginBottom: 16 },
+    '@md': { gridTemplateColumns: '1fr', marginBottom: 64 },
     '@lg': { gridTemplateColumns: 'repeat(2, 1fr)' },
   },
 })
@@ -74,7 +74,7 @@ export function Card() {
       <audio src="/click.wav" ref={audioRef} />
 
       <Container>
-        {datas[`${language}`].more.map(({ id, style, info }: DataType) => (
+        {datas[`${language}`].content.map(({ id, style, info }: DataType) => (
           <Box key={id} className={style}>
             <>
               {info.map((item, index) => (

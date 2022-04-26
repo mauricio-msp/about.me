@@ -1,6 +1,6 @@
 import { styled } from '@/styles/stitches.config'
 
-export const Container = styled('div', {
+export const Container = styled('main', {
   width: '100%',
   maxWidth: 1280,
   margin: '0 auto',
@@ -33,7 +33,7 @@ export const Profile = styled('section', {
   alignItems: 'flex-start',
   gap: 32,
 
-  padding: '80px 24px',
+  padding: '72px 24px',
 
   '& .avatar': {
     borderRadius: '9999px',
@@ -116,26 +116,29 @@ export const Social = styled('footer', {
   },
 })
 
-export const Main = styled('main', {
+export const About = styled('section', {
   display: 'flex',
   flexDirection: 'column',
 
-  padding: '80px 24px',
+  paddingInline: 24,
   right: 0,
 
   '@xs': {
     width: '100%',
     height: 'auto',
     position: 'relative',
+    paddingBlock: 0,
   },
   '@sm': {
     width: '100%',
     height: 'auto',
     position: 'relative',
+    paddingBlock: 0,
   },
   '@md': {
     width: '50%',
     height: '100vh',
     position: 'absolute',
+    paddingBlock: 80,
   },
 })
