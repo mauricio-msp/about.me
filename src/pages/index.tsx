@@ -4,11 +4,11 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 
-import { ButtonSound } from '@/components/Sound'
 import { Card } from '@/components/Card'
-import { TranslateGroup } from '@/components/Translated'
 import { Separator } from '@/components/Separator'
 import { Switch } from '@/components/Switch'
+import { ToggleButtonLanguage } from '@/components/ToggleButtonLanguage'
+import { ToggleButtonSound } from '@/components/ToggleButtonSound'
 
 import { useViewport } from '@/hooks/useViewport'
 import { useProvider } from '@/hooks/useProvider'
@@ -42,9 +42,9 @@ const Home: NextPage = () => {
         <H.Settings>
           <Switch />
           <Separator orientation="vertical" />
-          <TranslateGroup />
+          <ToggleButtonLanguage />
           <Separator orientation="vertical" />
-          <ButtonSound />
+          <ToggleButtonSound />
         </H.Settings>
 
         <H.Profile>

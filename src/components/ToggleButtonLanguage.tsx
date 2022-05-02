@@ -26,6 +26,7 @@ const StyledItem = styled(ToggleGroupPrimitive.Item, {
   alignItems: 'center',
   justifyContent: 'center',
   transition: 'all 0.2s ease-in-out',
+  boxShadow: `0 2px 10px rgba(0, 0, 0, 0.1)`,
 
   '&:first-child': {
     marginLeft: 0,
@@ -33,7 +34,7 @@ const StyledItem = styled(ToggleGroupPrimitive.Item, {
     borderBottomLeftRadius: 4,
   },
   '&:last-child': { borderTopRightRadius: 4, borderBottomRightRadius: 4 },
-  '&:hover': {
+  '&:hover:not(:disabled)': {
     opacity: 0.5,
     cursor: 'pointer',
   },
@@ -42,21 +43,20 @@ const StyledItem = styled(ToggleGroupPrimitive.Item, {
     color: '$primary',
   },
   '&:focus': { position: 'relative', boxShadow: `0 0 0 2px black` },
+  '&[disabled]': { cursor: 'not-allowed' },
 })
 
 const ToggleGroup = StyledToggleGroup
 const ToggleGroupItem = StyledItem
 
-export function TranslateGroup() {
+export function ToggleButtonLanguage() {
   const { language, toggleLanguage } = useProvider()
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const storageLanguage = window.localStorage.getItem('@app:language')
 
-      if (storageLanguage) {
-        toggleLanguage(storageLanguage)
-      }
+      if (storageLanguage) toggleLanguage(storageLanguage)
     }
   }, [])
 
@@ -68,10 +68,18 @@ export function TranslateGroup() {
       css={{ display: 'flex' }}
       onValueChange={(value: string) => toggleLanguage(value)}
     >
-      <ToggleGroupItem value="pt" aria-label="pt translate">
+      <ToggleGroupItem
+        value="pt"
+        aria-label="pt translate"
+        disabled={language === 'pt'}
+      >
         PT
       </ToggleGroupItem>
-      <ToggleGroupItem value="en" aria-label="en translate">
+      <ToggleGroupItem
+        value="en"
+        aria-label="en translate"
+        disabled={language === 'en'}
+      >
         EN
       </ToggleGroupItem>
     </ToggleGroup>

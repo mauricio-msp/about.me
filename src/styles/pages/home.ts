@@ -35,9 +35,7 @@ export const Profile = styled('section', {
 
   padding: '72px 24px',
 
-  '& .avatar': {
-    borderRadius: '9999px',
-  },
+  '& .avatar': { borderRadius: '9999px' },
 
   '& .icon-greetings': {
     objectFit: 'contain',

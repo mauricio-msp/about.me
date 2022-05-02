@@ -35,16 +35,14 @@ const StyledToggle = styled(TogglePrimitive.Root, {
 
 const Toggle = StyledToggle
 
-export function ButtonSound() {
+export function ToggleButtonSound() {
   const { sound, enableSound } = useProvider()
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const storageSound = window.localStorage.getItem('@app:sound')
 
-      if (storageSound) {
-        enableSound(JSON.parse(storageSound))
-      }
+      if (storageSound) enableSound(JSON.parse(storageSound))
     }
   }, [])
 
